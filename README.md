@@ -80,3 +80,59 @@ Let me know if you want me to add installation or usage instructions!
 
 ![image](https://github.com/user-attachments/assets/245637dc-26b2-45f2-bf1e-31c690932ac3)
 
+## ⚙️ How Does It Work?
+
+#### 🎧 Welcome Audio Message
+A friendly welcome message is played using the VITS Text-to-Speech (TTS) model to set a warm, engaging tone.
+
+#### 📤 Upload Your Image
+Users upload a facial image via the Gradio interface.
+
+#### 🧠 Emotion Detection with DeepFace
+The image is analyzed using DeepFace, extracting the user’s emotion, age, and gender.
+
+#### 📍 Emotion Classification & Routing
+Once the emotion is detected, the chatbot dynamically shifts its response logic to match the classified emotion:
+
+'angry': 😠
+
+'disgust': 😷
+
+'fear': 😨
+
+'happy': 😊
+
+'sad': 😢
+
+'surprise': 😲
+
+'neutral': 😐
+
+#### 🗂️ JSON-Driven Response Logic
+Each emotion is mapped to specific advice and dynamic follow-up questions stored in a structured JSON format. The chatbot uses the following prompting logic to generate personalized advice using LLaMA 2:
+
+```sh
+prompt = (
+    f"User feels {emotion} and said: '{user_response}'.\n"
+    f"Advice: \"{advice}\"\n"
+    f"Rewrite this as a single empathetic sentence directly addressing the user's situation. "
+    f"Respond only with the rephrased line in quotes, no explanation or questions."
+)
+```
+#### 🖼️ Visual Feedback
+The user's image is annotated with detected emotion labels and confidence scores, and displayed for transparency.
+
+#### 📊 Emotion Data Visualization
+Emotion trends are visualized using Plotly, Matplotlib, and Seaborn:
+
+- Treemap: Shows emotion, age, and gender distribution.
+
+- Bar Chart: Displays confidence levels of emotions with expressive emojis.
+
+#### 🤖 Empathetic Advice via LLaMA 2
+The Captain Feels chatbot uses LLaMA 2 (GGUF) to deliver rephrased, empathetic guidance and asks context-aware follow-up questions.
+
+#### 🧵 Chat Memory & Exit Flow
+The system maintains conversational context and enables graceful exits through simple commands like exit or goodbye.
+
+
