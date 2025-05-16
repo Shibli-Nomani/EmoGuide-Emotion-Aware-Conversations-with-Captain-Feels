@@ -68,3 +68,15 @@ Upload Image → 🧠 Analyze → 🤖 Chat with Captain Feels
 This blend of AI models and visualization tools delivers a powerful, empathetic chatbot experience — smart, sensitive, and visually engaging.
 Let me know if you want me to add installation or usage instructions!
 
+### 📌 Image - 1
+
+![image](https://github.com/user-attachments/assets/0a0b3fcc-62e4-4f1e-b9dd-0b0e5f574441)
+
+### 📌 Image - 2
+
+![image](https://github.com/user-attachments/assets/bf5cf0a8-08fc-4728-a4ad-b34d665efc48)
+
+### 📌 Image - 3
+
+![image](https://github.com/user-attachments/assets/245637dc-26b2-45f2-bf1e-31c690932ac3)
+
